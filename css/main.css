@@ -10,21 +10,27 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 html{
     font-size: 10px !important;
+    scroll-behavior:smooth;
 }
 body{
 	font-family: 'SUIT-Regular';
-    background-color: #1e1e1e;
+    background-color: #F4F4F4;
     font-size: inherit;
-
+    overflow-x: hidden;
 }
 .inner{
 	max-width: 128rem;
 	margin: auto;
-    padding: 0 16px;
     box-sizing: border-box;
+    padding: 0 20px;
 }
 header{
     position: fixed;
@@ -33,7 +39,7 @@ header{
     right: 0;
     background: transparent;
     height: 60px;
-    color: white;
+    background: #ffffff60;
 }
 header .inner{
     max-width: 1280px;
@@ -45,7 +51,6 @@ header .inner{
 header a.logo{
     font-size: 20px;
     font-weight: bold;
-    color: white;
 }
 header nav{}
 header nav ul{
@@ -55,43 +60,65 @@ header nav ul{
 }
 header nav ul  li{}
 header nav ul  li a{
-    color: white;
     text-decoration: none;
     padding: 4px 8px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 /* visual section  */
-/* section#visual{
-    background: url(../images/졸리당.jpg)no-repeat center/cover;
+section#visual{
+    background: url(../images/visual.png)no-repeat center/cover;
     height: calc(100vh - 6rem);
     width: 100vw;
     padding-top: 6rem;
-} */
+}
 section#visual strong{
     font-family: 'CWDangamAsac-Bold';
-    color: white;
     font-size: 10rem;
-    margin: 80px auto;
+    margin: 48px auto;
     text-align: center;
     display: block;
 }
 
 
-/* profile section  */
-section#profile{}
-
-/* aboutMe section  */
-section#aboutMe{}
-
+section#intro{
+  background: url(../images/intro_bg.png)no-repeat center/cover;
+  height: calc(100vh - 6rem);
+  width: 100vw;
+}
+@media (max-width: 768px) {
+  section#intro{
+    background: url(../images/mobile_intro_bg.png)no-repeat center/cover;
+    height: calc(100vh - 6rem);
+    width: 100vw;
+  }
+}
+section#profile{
+  background: url(../images/.png)no-repeat center/cover;
+  height: calc(100vh - 6rem);
+  width: 100vw;
+}
+footer#closing{
+  background: url(../images/closing_bg.png)no-repeat center/cover;
+  height: calc(100vh - 6rem);
+  width: 100vw;
+}
 
 
   
   /* 작은 화면 (모바일) */
   @media (max-width: 768px) {
     html {
-      font-size: 4px !important; /* 작은 화면에 대한 폰트 크기 */
+      font-size: 6px !important; /* 작은 화면에 대한 폰트 크기 */
     }
+    section#visual strong{
+      font-family: 'CWDangamAsac-Bold';
+      font-size: 8rem;
+      margin: 100px auto;
+      text-align: center;
+      display: block;
+      white-space: nowrap;
+  }
   }
   
   /* 중간 화면 (타블렛) */
